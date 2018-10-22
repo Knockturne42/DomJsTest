@@ -8,8 +8,11 @@ var square = document.getElementsByClassName('square');
 
 function init(laDiv) {
 	laDiv.style.backgroundColor = "white";
+	if(laDiv.style.height)
+		setTimeout(function(){ laDiv.style.width = "100px"; }, 2000);
+	else
+		laDiv.style.width = "100px";
 	laDiv.style.height = "100px";
-	laDiv.style.width = "100px";
 	laDiv.style.transitionDuration = "2s";
 	if (!square[0])
 	{
@@ -65,7 +68,7 @@ lesBoutons[1].addEventListener("click", function() {
 });
 lesBoutons[2].addEventListener("click", function() {
 	if (laDiv){
-		laDiv.style.height = "300px";
+		setTimeout(function(){ laDiv.style.height = "300px"; }, 2000);
 		laDiv.style.width = "300px";
 	}
 });
@@ -76,11 +79,11 @@ lesBoutons[3].addEventListener("click", function() {
 
 		if(maWidth == 500)
 		{
+			setTimeout(function(){ laDiv.style.width = "100px"; }, 2000);
 			laDiv.style.height = "100px";
-			laDiv.style.width = "100px";
 		}
 		else {
-			laDiv.style.height = (maHeight+50)+"px";
+			setTimeout(function(){ laDiv.style.height = (maHeight+50)+"px"; }, 2000);
 			laDiv.style.width = (maWidth+50)+"px";
 		}
 	}
