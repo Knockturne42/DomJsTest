@@ -5,8 +5,16 @@
 	transition-duration: 2s;
 }
 
-#center {
-	transition-duration: 2s;
+.square{
+	width: 50%;
+	height: 50%;
+	background-color: red;
+}
+
+div {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
 }
 
 body {
@@ -21,7 +29,6 @@ body {
 ul {
 	display: flex;
 	flex-direction: column;
-
 }
 
 li {
